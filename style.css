@@ -1,0 +1,98 @@
+.horizontal-center {
+  text-align: center;
+}
+
+div.player-creation {
+  text-align: center;
+}
+
+h2.name {
+  display: inline-block;
+  width: 250px;
+}
+
+h2.avatar {
+  display: inline-block;
+  width: 300px;
+}
+
+a.button {
+  margin-left: 380px;
+}
+
+ul {
+  text-align: center;
+  position: flex;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+} 
+
+ul li {
+  list-style: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 15px;
+  color: blue;
+}
+
+.drawing-game-info {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.drawing-game-info li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 100px;
+  color: black;
+}
+
+.chatbox {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 30px;
+}
+
+textarea {
+  resize: none;
+}
+
+.dropdown-button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: whitesmoke;
+  min-width: 100px;
+  z-index: 1;
+}
+
+.dropdown-content h3 {
+  color: black;
+  padding: 2px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content h3:hover {
+  background-color: cyan;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Drawing Game Page</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+    <h1 class='horizontal-center'>Drawing Game</h1>
+    <a class="button" href = './index.html'><button>Home</button></a> 
+    
+    <div class="drawing-game-info">
+      <ul>
+        <li>Theme + Word Length</li>
+        <li>Timer</li>
+        <li>Scores</li>
+      </ul>
+    </div>
+
+    <div class="drawing-materials">
+      <ul>
+        <li class="dropdown">
+          <h3 class="dropdown-button">Pen Colors</h3>
+          <div class="dropdown-content">
+            <h3>Red</h3>
+            <h3>Blue</h3>
+            <h3>Black</h3>            
+          </div>
+        </li>
+        <li class="dropdown">
+          <h3 class="dropdown-button">Pen Widths</h3>
+          <div class="dropdown-content">
+            <h3>2</h3>
+            <h3>4</h3>
+            <h3>6</h3>
+            <h3>8</h3>                        
+          </div>
+        </li>
+        <li class="dropdown">
+          <h3 class="dropdown-button">Background Color</h3>
+          <div class="dropdown-content">
+            <h3>Green</h3>
+            <h3>Yellow</h3>
+            <h3>Violet</h3>                     
+          </div>
+        </li>                           
+
+        <li><h3>Eraser<h3></li>
+        <li><h3>Clear Canvas<h3></li>
+      </ul>
+    </div>
+
+    <div class="chatbox">
+      <textarea placeholder="Guess the drawing" cols="100" rows="5"></textarea>
+      <br>
+      <input type="submit" value="Submit">
+    </div>
+
+<!-- The drawing canvas doesn't actually overlap with the textbox. When you open it on a new tab it fits perfectly. -->
+
+    <script src="p5.js"></script>
+    <script src="sketch.js"></script>  
+
+  </body>
+</html>
