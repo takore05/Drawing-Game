@@ -1,11 +1,8 @@
-//Variable declaration
+//Variable declarations
 var cnv;
 
-/* var colorPicker; */
 var penWidthSlider;
 var eraserButton;
-
-/* var dropdownBackground; */
 
 var backgroundPicker;
 
@@ -21,28 +18,14 @@ var drawingTools;
 
 var saveImgButton;
 
-/* let randomSizes; */
 var img1;
 var img2;
 var img3;
 var img4;
 
-/* Centering and positioning the canvas on the drawing pages*/
-/* function centerCanvas(cnvYStart) {
-  let x = (windowWidth - width) / 2;
-  let y = (((windowHeight - height) / 2) + ((windowHeight - cnvYStart) / 2) );
-  cnv.position(x, y);
-} */
-
 /* Resizes the canvas for different window sizes */
 function windowResized() {
   resizeCanvas(windowWidth * 0.7, windowHeight * 0.7);
-/*   penEraserButtonPosition = penEraserButton.position(); 
-  instructions.position(penEraserButtonPosition.x - 275, penEraserButtonPosition.y);   */
-/*   saveImgButtonPosition = saveImgButton.position();
-  //centerCanvas(saveImgButtonPosition.y);
-  //cnv.center();
-*/
 }
 
 /* Loads images for different pen types */
@@ -70,10 +53,8 @@ function setup() {
   homeButton.style('background-color', '#ffffff');
   homeButton.style('border-radius', '5px');
 
-/*   dropdownBackground(); */
 
 /* Create a background color picker list item element that is the child of drawingTools (part of tool bar)*/ 
-
 /* default sets background to be white instead of transparent before changing background colors*/
   background(255);
   backgroundPicker = createColorPicker('white');
@@ -86,12 +67,6 @@ function setup() {
   backgroundPicker.style('border-radius', '5px');
 
   dropdownPens();
-
-/* Create a colorPicker list item element that is the child of drawingTools (part of tool bar)*/ 
-/*   colorPicker = createColorPicker('black');
-  colorPickerLi = createElement("li", "Pen Colors </br>");
-  colorPickerLi.child(colorPicker);
-  drawingTools.child(colorPickerLi); */
 
   /* Create a penWidthSlider list item element that is the child of drawingTools (part of tool bar)*/ 
   penWidthSlider = createSlider(5, 55, 30);
@@ -118,7 +93,7 @@ function setup() {
   instructions = createElement('h6', instructions);  
   penEraserButtonLi.child(instructions);  
   penEraserButtonPosition = penEraserButton.position();
-  instructions.position(penEraserButtonPosition.x - 250, penEraserButtonPosition.y);
+  instructions.position(penEraserButtonPosition.x - 220, penEraserButtonPosition.y - 10);
 
   /* Clears the canvas + removes the background color also (need to change background before drawing) */
   clearCanvas();
@@ -167,10 +142,9 @@ function preload() {
 function rainbowPen() {
   if(mouseIsPressed){   
     colorMode(HSB);
-    stroke((5*frameCount)  % 255, 100, 200);
-    fill((5*frameCount) % 255, 255, 100);
+    stroke((5*frameCount)  % 255, 255, 255);
+    fill((5*frameCount) % 255, 255, 255);
     circle(mouseX, mouseY, random(0, 50));
-/*     randomSizes = random(0, 50); */
   }  
 }
 
@@ -204,10 +178,6 @@ function heartPen() {
 }
 
 function draw() {
-/* Choosing color of pen to draw with*/   
-/*   let chosenColor = colorPicker.value();
-  stroke(chosenColor); */
-
   /* Choosing pen/eraser width to draw or erase with*/
   let chosenPenWidth = penWidthSlider.value();
   strokeWeight(chosenPenWidth);
@@ -244,38 +214,6 @@ function updateBG () {
   background(backgroundPicker.color());   
 }
 
-/* function dropdownBackground() {
-  dropdownBG = createSelect(); */
-
-/*colordropdown list icolort that is the child of drawingTools (part of tool bar) */ 
-/*   dropdownLi = createElement("li", "Background Colors </br>");
-  dropdownLi.child(dropdownBG);
-  drawingTools.child(dropdownLi); */
-
-// Options for drop down menu 
-/*   dropdownBG.option('white');
-  dropdownBG.option('blue');
-  dropdownBG.option('red');
-  dropdownBG.option('green');
-  dropdownBG.option('black');
-  dropdownBG.changed(changeBackground); 
-} */
-
-/* Function that changes background color depending on the color chosen */
-/* function changeBackground() {
-  colorMode(HSB);
-  background(255);
-  if (dropdownBG.value() == 'blue') {
-    background(255, 204, 100);
-  } else if (dropdownBG.value() == 'red') {
-    background(0, 100, 100);
-  } else if (dropdownBG.value() == 'green') {
-    background(120, 100, 50);
-  } else if (dropdownBG.value() == 'black') {
- background(0,0,0);
-  }
-}  */
-
  /* Create a drop down menu to choose different pen types */
 function dropdownPens() {
   dropdownPens = createSelect();
@@ -286,7 +224,6 @@ function dropdownPens() {
   drawingTools.child(dropdownLi);
   dropdownPens.style('background-color', '#ffffff');
   dropdownPens.style('border-radius', '5px');
-
 
 
   // Options for pen type drop down menu 
