@@ -1,4 +1,4 @@
-//Variable declaration
+//Variable declarations
 var cnv;
 
 var colorPicker;
@@ -7,7 +7,7 @@ var backgroundPicker;
 
 var penWidthSlider;
 var eraserButton;
-/* var dropdown; */
+
 var tool = 'pen';
 var instructions = '';
 
@@ -17,19 +17,10 @@ var drawingTools;
 var saveImgButton;
 var clearButton;
 
-/* Centering and positioning the canvas on the drawing pages */
-/*function centerCanvas(cnvYStart) {
-  let x = (windowWidth - width) / 2;
-  let y = (((windowHeight - height) / 2) + ((windowHeight - cnvYStart) / 2) );
-  cnv.position(x, y);
-}*/
 
 /* Resizes the canvas for different window sizes */
 function windowResized() {
   resizeCanvas(windowWidth * 0.7 ,windowHeight * 0.7);
-/*   saveImgButtonPosition = saveImgButton.position(); */
-  //centerCanvas(saveImgButtonPosition.y);
-  //cnv.center();
 }
 
 /* Creation of canvas */
@@ -68,8 +59,6 @@ function setup() {
   backgroundPicker.style('background-color', '#ffffff');
   backgroundPicker.style('border-radius', '5px');
 
-/*   dropDown(); */
-
   /* Create a colorPicker list item element that is the child of drawingTools (part of tool bar)*/ 
   colorPicker = createColorPicker('black');
   colorPickerLi = createElement("li", "Pen Colors </br>");
@@ -78,7 +67,6 @@ function setup() {
   colorPicker.style('background-color', '#ffffff');
   colorPicker.style('border-radius', '5px');
   
-
   /* Create a penWidthSlider list item element that is the child of drawingTools (part of tool bar)*/ 
   penWidthSlider = createSlider(5, 55, 30);
   penWidthSliderLi = createElement("li", "Pen/Eraser Widths </br>");
@@ -107,7 +95,6 @@ function setup() {
   /* Clears the canvas + removes the background color also (so need to change background before drawing) */
   clearCanvas();
 
-
   /* Create a button and label using a saveImgButton list item element that is the child of drawingTools (part of tool bar)*/ 
   saveImgButton = createButton('Save');
   saveImgButtonLi = createElement("li", "Save Image</br>");
@@ -117,9 +104,6 @@ function setup() {
   saveImgButton.mousePressed(saveImage);
   saveImgButton.style('background-color', '#ffffff');
   saveImgButton.style('border-radius', '5px');
-
-
-  
 }
 
 /* Displays instructions when hovering over the pen/eraser button */
@@ -174,43 +158,6 @@ function updateBG () {
   background(backgroundPicker.color());   
 }
 
- /* Create a drop down menu to choose background colors */
-
-/* function dropDown() {
-  dropdown = createSelect(); */
-
-/* Create a dropdown list item element that is the child of drawingTools (part of tool bar) */ 
-/*   dropdownLi = createElement("li", "Background Colors </br>");
-  dropdownLi.child(dropdown);
-  drawingTools.child(dropdownLi); */
-
-// Options for drop down menu 
-/*   dropdown.option('white');
-  dropdown.option('blue');
-  dropdown.option('red');
-  dropdown.option('green');
-  dropdown.option('black');
-  dropdown.changed(changeBackground); 
-} */
-
-/* function changeBackground() {
-    document.body.style.background = dropdown.value();
-} */
-
-/* Function that changes background color depending on the color chosen */
-/* function changeBackground() {
-  background(255);
-  if (dropdown.value() == 'blue') {
-    background(0, 0, 255);
-  } else if (dropdown.value() == 'red') {
-    background(255,0,0);
-  } else if (dropdown.value() == 'green') {
-    background(0,255,0);
-  } else if (dropdown.value() == 'black') {
-    background(0,0,0);
-  }
-} */
-
 /* Clears the canvas + removes the background color also (so need to change background before drawing) */
 function clearCanvas() {
   clearButton = createButton("Clear");
@@ -221,7 +168,6 @@ function clearCanvas() {
   clearButton.mousePressed(clear);
   clearButton.style('background-color', '#ffffff');
   clearButton.style('border-radius', '5px');
-
 }
 
 /* Saves the canvas drawing */
