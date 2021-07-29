@@ -1,3 +1,4 @@
+/* Formats the homepage */
 body.home, html.home {
   height: 100%;
 }
@@ -7,6 +8,8 @@ body.home, html.home {
   text-align: center;
   color: white;
 }
+
+/* Format the homepage buttons */
 .button {
     width: 115px;
     height: 25px;
@@ -20,27 +23,13 @@ body.home, html.home {
     font-size: 20px;
 }
 
-.button-one {
-    width: 125px;
-    height: 40px;
-    background: green;
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    line-height: 70px;
-    font-size: 20px;
-}
+/* Format and aligns the headings of the pages */
 .draw-page {
   text-align: center;
   color: black;
 }
-/* .horizontal-left {
-  text-align: left;
-  padding:0 25px;
-} */
 
+/* Format the background of the home page */
 .home {
   background-image: url("Images/homePageBackground.png");
   height: 100%; 
@@ -49,7 +38,8 @@ body.home, html.home {
   background-size: cover;
 }
 
-.free-draw {
+/* Format the backgrounds of the drawing pages */
+.free-draw, .surprise-draw {
   background-image: url("Images/drawingPageBG.png");
   height: 100%; 
   background-position: center;
@@ -57,92 +47,37 @@ body.home, html.home {
   background-size: cover;
 }
 
-.surprise-draw {
-  background-image: url("Images/drawingPageBG.png");
-  height: 100%; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/*.button {
-  position: absolute;
-  top: 132px;
-  left: 80px;
-}*/
-
-
-/* Centers and formats the unordered list on the drawing pages */
+/* Format and aligns the unordered list on the drawing pages */
 .drawing-materials ul{
   list-style-type: none;
   text-align: center;
-/*   position: center;
-  top: 110px;
-  left: 180px;
-  margin: 0;
-  padding: 0; */
 } 
 
 /* Formats and style the list of text in the drawing pages */
 .drawing-materials ul li {
-/*   text-align: center; */
-/*   list-style: none;
-  text-decoration: none; */
   font-size: 20px;
   display: inline-block;
   padding: 0 20px;
   color: black;
 }
+
+/* Formats and align the unordered list in the pong game page */
+.game-button ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+/* Formats and style the list of text in the pong game pages */
+.game-button ul li {
+  font-size: 20px;
+  display: inline-block;
+  padding: 0 40px;
+  color: black;
+}
+
 /* Formats canvas alignment */
 canvas {
   padding: 0;
   margin: auto;
   display: block;
 }
-
-
-/*@media all and (max-width: 500px) {
-  .drawing-materials ul {
-    text-align: center;
-    font-size: 30px;
-    display: inline-block;
-    padding: 0 10px;
-    color: black;
-
-  }*/
-
-/* div.player-creation {
-  text-align: center;
-}
-
-h2.name {
-  display: inline-block;
-  width: 250px;
-}
-
-h2.avatar {
-  display: inline-block;
-  width: 300px;
-}
-
-.button {
-  margin-left: 100px;
-}
-
-.glow-materials ul{
-  text-align: center;
-  position: center;
-  top: 110px;
-  left: 180px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.glow-materials ul li {
-  text-align: center;
-  list-style: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 25px;
-  color: blue;
-} */
