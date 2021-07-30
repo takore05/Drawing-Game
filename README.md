@@ -5,4 +5,4 @@ Currently the features are:
 - The ability to save the images the user draws
 - Clear canvas
 - Surprise draw page that allows users to draw on a canvas with specialty brushes
-- Pong game 
+- Two-Player Pong game 
