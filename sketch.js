@@ -17,25 +17,19 @@ var drawingTools;
 var saveImgButton;
 var clearButton;
 
-
-/* Resizes the canvas for different window sizes */
-function windowResized() {
-  resizeCanvas(windowWidth * 0.7 ,windowHeight * 0.7);
-}
-
-/* Creation of canvas */
 function setup() {
   /* Create div element with a class to format the unordered list and text*/
   drawingToolsDiv = createDiv();
   drawingToolsDiv.class("drawing-materials");
-
-  canvasDiv = createDiv();
-  cnv = createCanvas(windowWidth * 0.7, windowHeight * 0.7);   
-  cnv.parent(canvasDiv);
-
+  
   /* Create an unordered list element with the drawtools as the child of drawingToolsDiv (using html content)*/
   drawingTools = createElement("ul");
   drawingToolsDiv.child(drawingTools);
+  
+  /* Resizes the canvas for different window sizes */
+  canvasDiv = createDiv();
+  cnv = createCanvas(windowWidth * 0.7, windowHeight * 0.7);   
+  cnv.parent(canvasDiv);
 
   /* Create a homeButton list item element that is the child of drawingTools (part of tool bar)*/ 
   homeButton = createButton("Home");
@@ -174,7 +168,6 @@ function clearCanvas() {
 function saveImage() {
   save("My_Image" + ".png");
 }
-
 
 let previousState;
 function keyPressed(e) {
