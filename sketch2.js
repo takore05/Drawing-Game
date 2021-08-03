@@ -28,16 +28,20 @@ function windowResized() {
   resizeCanvas(windowWidth * 0.7, windowHeight * 0.7);
 }
 
-/* Loads images for different pen types */
 function setup() {
 
   /* Create div element with a class to format the unordered list and text*/
   drawingToolsDiv = createDiv();
   drawingToolsDiv.class("drawing-materials");   
 
+/* Create an unordered list element with the drawtools as the child of drawingToolsDiv (using html content)*/
+  drawingTools = createElement("ul");
+  drawingToolsDiv.child(drawingTools);
+  
+  /* Resizes the canvas for different window sizes */
   canvasDiv = createDiv();
   cnv = createCanvas(windowWidth * 0.7, windowHeight * 0.7);   
-  cnv.parent(canvasDiv); 
+  cnv.parent(canvasDiv);
 
   /* Create an unordered list element with the drawtools as the child of drawingToolsDiv (using html content)*/
   drawingTools = createElement("ul");
@@ -225,7 +229,6 @@ function dropdownPens() {
   dropdownPens.style('background-color', '#ffffff');
   dropdownPens.style('border-radius', '5px');
 
-
   // Options for pen type drop down menu 
   dropdownPens.option('Rainbow Pen');
   dropdownPens.option('Emoji Pen');
@@ -260,7 +263,6 @@ function clearCanvas() {
   clearButton.mousePressed(clear);
   clearButton.style('background-color', '#ffffff');
   clearButton.style('border-radius', '5px');
-
 }
 
 /* Saves the canvas drawing */
