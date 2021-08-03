@@ -23,18 +23,13 @@ var img2;
 var img3;
 var img4;
 
-/* Resizes the canvas for different window sizes */
-function windowResized() {
-  resizeCanvas(windowWidth * 0.7, windowHeight * 0.7);
-}
-
 function setup() {
 
   /* Create div element with a class to format the unordered list and text*/
   drawingToolsDiv = createDiv();
   drawingToolsDiv.class("drawing-materials");   
 
-/* Create an unordered list element with the drawtools as the child of drawingToolsDiv (using html content)*/
+  /* Create an unordered list element with the drawtools as the child of drawingToolsDiv (using html content)*/
   drawingTools = createElement("ul");
   drawingToolsDiv.child(drawingTools);
   
