@@ -21,11 +21,11 @@ Currently the features are:
 
 ## Demo
 
-See our project in action [here](https://drawing-game.athapar24.repl.co/)!
+See our project in action [here](https://drawing-game.athapar24.repl.co/).
 
-Check out the [demo video](https://drive.google.com/file/d/1JuCivRnTjQrWeVL52uFk2Ka7nrIOZtgj/view?usp=sharing)!
+Check out our [demo video](https://drive.google.com/file/d/1JuCivRnTjQrWeVL52uFk2Ka7nrIOZtgj/view?usp=sharing).
 
-View our project on [CodeDayLabs Website](https://showcase.codeday.org/project/ckqtyhwvo91771810qu4k1dzse4)!
+View our project on [CodeDayLabs Website](https://showcase.codeday.org/project/ckqtyhwvo91771810qu4k1dzse4).
 
 
 ## Credits
